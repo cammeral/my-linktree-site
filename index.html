@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منشئ روابط - Linktree</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- مكتبة QR Code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>أنشئ صفحتك الخاصة 🌐</h1>
+        
+        <div class="creator-form">
+            <input type="text" id="userName" placeholder="اسمك الكامل">
+            <input type="url" id="userImage" placeholder="رابط الصورة الشخصية (URL)">
+            
+            <div id="linksContainer">
+                <div class="link-input">
+                    <input type="url" class="userLink" placeholder="رابط 1">
+                </div>
+            </div>
+            
+            <button onclick="addLinkField()">+ إضافة رابط جديد</button>
+            <button onclick="generatePage()" class="generate-btn">إنشاء الصفحة</button>
+        </div>
+
+        <div id="result" class="hidden">
+            <div id="qrcode"></div>
+            <a id="pageLink" target="_blank" class="view-link">فتح الصفحة</a>
+            <button onclick="downloadQR()" class="download-btn">تحميل QR Code</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

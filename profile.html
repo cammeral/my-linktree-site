@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة الروابط</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="" alt="صورة الملف" class="profile-img" id="profileImage">
+        <h1 id="profileName"></h1>
+        <div class="links" id="profileLinks"></div>
+    </div>
+
+    <script>
+        // استرجاع البيانات من الرابط
+        const urlParams = new URLSearchParams(window.location.search);
+        const pageId = urlParams.get('id');
+        const data = JSON.parse(localStorage.getItem(pageId));
+
+        // تعبئة البيانات
+        if (data) {
+            document.getElementById('profileName').textContent = data.name;
+            document.getElementById('profileImage').src = data.image;
+            
+            data.links.forEach(link => {
+                const linkElement = document.createElement('a');
+                linkElement.href = link;
+                linkElement.className = 'link-btn';
+                linkElement.textContent = new URL(link).hostname;
+                linkElement.target = '_blank';
+                document.getElementById('profileLinks').appendChild(linkElement);
+            });
+        } else {
+            document.body.innerHTML = '<h1>الصفحة غير موجودة!</h1>';
+        }
+    </script>
+</body>
+</html>

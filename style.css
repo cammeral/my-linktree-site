@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.creator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+.generate-btn {
+    background: #27ae60;
+}
+
+.generate-btn:hover {
+    background: #219a52;
+}
+
+#result {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#qrcode {
+    margin: 20px auto;
+}
+
+.view-link {
+    display: block;
+    margin: 15px 0;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.download-btn {
+    background: #e67e22;
+}
+
+.download-btn:hover {
+    background: #d35400;
+}
+
+.hidden {
+    display: none;
+}
+
+.link-input {
+    margin: 10px 0;
+}
